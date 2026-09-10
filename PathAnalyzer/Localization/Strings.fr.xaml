@@ -1,0 +1,299 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=System.Runtime">
+
+    <sys:String x:Key="Lang.Code">fr</sys:String>
+
+    <!-- ==================== Navigation ==================== -->
+    <sys:String x:Key="Nav.Section">NAVIGATION</sys:String>
+    <sys:String x:Key="Nav.Home">Accueil</sys:String>
+    <sys:String x:Key="Nav.User">PATH utilisateur</sys:String>
+    <sys:String x:Key="Nav.System">PATH système</sys:String>
+    <sys:String x:Key="Nav.Backup">Sauvegardes</sys:String>
+    <sys:String x:Key="Nav.Clean">Nettoyage</sys:String>
+    <sys:String x:Key="Nav.Settings">Réglages</sys:String>
+    <sys:String x:Key="Nav.Admin">Passer en administrateur</sys:String>
+    <sys:String x:Key="Nav.Admin.Tip">Nécessaire pour modifier le PATH système</sys:String>
+    <sys:String x:Key="Nav.Theme.Dark">Thème sombre</sys:String>
+    <sys:String x:Key="Nav.Theme.Light">Thème clair</sys:String>
+
+    <!-- ==================== Accueil ==================== -->
+    <sys:String x:Key="Home.Title">Vue d'ensemble</sys:String>
+    <sys:String x:Key="Home.Subtitle">Le PATH indique à Windows où trouver les programmes. Voici son état actuel.</sys:String>
+    <sys:String x:Key="Home.Rescan">Réanalyser</sys:String>
+    <sys:String x:Key="Home.Rescan.Tip">Relire le registre et refaire l'analyse (F5)</sys:String>
+    <sys:String x:Key="Home.Health.Analyzing">Analyse en cours…</sys:String>
+    <sys:String x:Key="Home.Health.Ok">Tout va bien</sys:String>
+    <sys:String x:Key="Home.Health.Ok.Detail">Les {0} dossiers du PATH existent et ne se répètent pas.</sys:String>
+    <sys:String x:Key="Home.Health.Warning.One">1 point à surveiller</sys:String>
+    <sys:String x:Key="Home.Health.Warning.Many">{0} points à surveiller</sys:String>
+    <sys:String x:Key="Home.Health.Warning.Detail">Doublons ou dossiers vides : sans gravité, mais le PATH gagnerait à être allégé.</sys:String>
+    <sys:String x:Key="Home.Health.Error.One">1 problème à corriger</sys:String>
+    <sys:String x:Key="Home.Health.Error.Many">{0} problèmes à corriger</sys:String>
+    <sys:String x:Key="Home.Health.Error.Detail">Des dossiers du PATH sont introuvables ou mal écrits. Ouvrez « Nettoyage » pour les retirer en un clic.</sys:String>
+    <sys:String x:Key="Home.Usage.Title">Place occupée dans le PATH effectif</sys:String>
+    <sys:String x:Key="Home.Usage.Value">{0} / {1} caractères</sys:String>
+    <sys:String x:Key="Home.Usage.Remaining">Il reste {0} caractères avant la limite de Windows ({1:0.#} % utilisés). Les deux traits marquent {2} caractères (limite de setx) et {3} (limite de cmd.exe).</sys:String>
+    <sys:String x:Key="Home.Limit.Absolute.Title">Limite absolue dépassée</sys:String>
+    <sys:String x:Key="Home.Limit.Absolute.Message">Plus de 32767 caractères : Windows tronquera le PATH. Retirez des dossiers.</sys:String>
+    <sys:String x:Key="Home.Limit.Cmd.Title">Plus de 8191 caractères</sys:String>
+    <sys:String x:Key="Home.Limit.Cmd.Message">Certains scripts .bat ou .cmd et des outils anciens peuvent tronquer le PATH.</sys:String>
+    <sys:String x:Key="Home.Limit.Setx.Title">Plus de 2047 caractères</sys:String>
+    <sys:String x:Key="Home.Limit.Setx.Message">La commande setx et certains installateurs anciens tronqueront le PATH.</sys:String>
+    <sys:String x:Key="Home.Quick">Actions rapides</sys:String>
+    <sys:String x:Key="Home.Backup.Title">Sauvegarder les PATH</sys:String>
+    <sys:String x:Key="Home.Backup.Detail">Enregistre une copie de l'état actuel, avec un fichier .reg de secours.</sys:String>
+    <sys:String x:Key="Home.Report.Title">Exporter un rapport</sys:String>
+    <sys:String x:Key="Home.Report.Detail">Un fichier texte détaillant chaque dossier et chaque problème trouvé.</sys:String>
+
+    <!-- ==================== Pages PATH ==================== -->
+    <sys:String x:Key="Page.User.Title">PATH utilisateur</sys:String>
+    <sys:String x:Key="Page.User.Subtitle">Vos dossiers personnels, modifiables sans droits particuliers.  ·  {0}</sys:String>
+    <sys:String x:Key="Page.System.Title">PATH système</sys:String>
+    <sys:String x:Key="Page.System.Subtitle">Les dossiers communs à tous les comptes de l'ordinateur.  ·  {0}</sys:String>
+
+    <!-- ==================== Sauvegardes ==================== -->
+    <sys:String x:Key="Backup.Title">Sauvegardes</sys:String>
+    <sys:String x:Key="Backup.Subtitle">Une copie complète des deux PATH est enregistrée avant toute écriture. Vous pouvez aussi en créer une à tout moment.</sys:String>
+    <sys:String x:Key="Backup.Create.Title">Créer une sauvegarde maintenant</sys:String>
+    <sys:String x:Key="Backup.Create.Detail">Enregistre les PATH tels qu'ils sont dans le registre, avec un commentaire de votre choix.</sys:String>
+    <sys:String x:Key="Backup.Restore.Title">Restaurer une sauvegarde</sys:String>
+    <sys:String x:Key="Backup.Restore.Detail">Charge une sauvegarde dans l'éditeur. Rien n'est écrit tant que vous n'appliquez pas.</sys:String>
+    <sys:String x:Key="Backup.Folder.Title">Ouvrir le dossier des sauvegardes</sys:String>
+    <sys:String x:Key="Backup.Info.Title">Comment revenir en arrière sans l'application</sys:String>
+    <sys:String x:Key="Backup.Info.Detail">Chaque sauvegarde produit deux fichiers : un .json lisible par cette application, et un .reg que vous pouvez double-cliquer dans l'Explorateur pour restaurer le PATH même sans l'application.</sys:String>
+
+    <!-- ==================== Nettoyage ==================== -->
+    <sys:String x:Key="Clean.Title">Nettoyage</sys:String>
+    <sys:String x:Key="Clean.Subtitle">Chaque action vous montre ce qui sera retiré et vous demande confirmation. Rien n'est écrit dans le registre avant que vous appliquiez.</sys:String>
+    <sys:String x:Key="Clean.Section.Both">Les deux ensemble</sys:String>
+    <sys:String x:Key="Clean.Duplicates">Supprimer les doublons</sys:String>
+    <sys:String x:Key="Clean.Missing">Supprimer les dossiers introuvables</sys:String>
+    <sys:String x:Key="Clean.Tidy">Corriger espaces, guillemets et lignes vides</sys:String>
+    <sys:String x:Key="Clean.Cross">Retirer du PATH utilisateur ce qui est déjà dans le PATH système</sys:String>
+    <sys:String x:Key="Clean.Count.Dup.None">Aucun doublon</sys:String>
+    <sys:String x:Key="Clean.Count.Dup.One">1 doublon trouvé</sys:String>
+    <sys:String x:Key="Clean.Count.Dup.Many">{0} doublons trouvés</sys:String>
+    <sys:String x:Key="Clean.Count.Missing.None">Tous les dossiers existent</sys:String>
+    <sys:String x:Key="Clean.Count.Missing.One">1 dossier introuvable</sys:String>
+    <sys:String x:Key="Clean.Count.Missing.Many">{0} dossiers introuvables</sys:String>
+    <sys:String x:Key="Clean.Count.Tidy.None">Rien à corriger</sys:String>
+    <sys:String x:Key="Clean.Count.Tidy.One">1 ligne à corriger</sys:String>
+    <sys:String x:Key="Clean.Count.Tidy.Many">{0} lignes à corriger</sys:String>
+    <sys:String x:Key="Clean.Count.Cross.None">Aucun dossier en double entre les deux PATH</sys:String>
+    <sys:String x:Key="Clean.Count.Cross.One">1 dossier en double</sys:String>
+    <sys:String x:Key="Clean.Count.Cross.Many">{0} dossiers en double</sys:String>
+
+    <!-- ==================== Réglages ==================== -->
+    <sys:String x:Key="Settings.Title">Réglages</sys:String>
+    <sys:String x:Key="Settings.Subtitle">Langue, apparence, analyse et droits d'écriture.</sys:String>
+    <sys:String x:Key="Settings.Language.Title">Langue</sys:String>
+    <sys:String x:Key="Settings.Language.Detail">Anglais ou français. Le changement est immédiat.</sys:String>
+    <sys:String x:Key="Settings.Appearance.Title">Apparence</sys:String>
+    <sys:String x:Key="Settings.Appearance.Detail">Clair, sombre, ou identique à Windows.</sys:String>
+    <sys:String x:Key="Settings.Theme.System">Système</sys:String>
+    <sys:String x:Key="Settings.Theme.Light">Clair</sys:String>
+    <sys:String x:Key="Settings.Theme.Dark">Sombre</sys:String>
+    <sys:String x:Key="Settings.Inspect.Title">Inspecter le contenu des dossiers</sys:String>
+    <sys:String x:Key="Settings.Inspect.Detail">Compte les fichiers et les exécutables de chaque dossier. Un peu plus lent sur les disques lents.</sys:String>
+    <sys:String x:Key="Settings.Admin.Title">Droits administrateur</sys:String>
+    <sys:String x:Key="Settings.Admin.Yes">L'application tourne en administrateur : les deux PATH sont modifiables.</sys:String>
+    <sys:String x:Key="Settings.Admin.No">Sans ces droits, le PATH système est visible mais pas modifiable.</sys:String>
+    <sys:String x:Key="Settings.Admin.Button">Relancer en administrateur</sys:String>
+    <sys:String x:Key="Settings.About.Title">À propos</sys:String>
+    <sys:String x:Key="Settings.About.Detail">Path Analyzer {0}  ·  {1}  ·  compte {2}</sys:String>
+    <sys:String x:Key="Settings.Registry.Title">Emplacements dans le registre</sys:String>
+    <sys:String x:Key="Settings.Registry.User">PATH utilisateur : {0}</sys:String>
+    <sys:String x:Key="Settings.Registry.System">PATH système    : {0}</sys:String>
+
+    <!-- ==================== Modifications en attente ==================== -->
+    <sys:String x:Key="Dirty.Discard">Tout annuler</sys:String>
+    <sys:String x:Key="Dirty.Apply">Appliquer les modifications</sys:String>
+    <sys:String x:Key="Dirty.Apply.Tip">Écrire dans le registre (Ctrl + Entrée)</sys:String>
+    <sys:String x:Key="Dirty.Title">Modifications en attente</sys:String>
+    <sys:String x:Key="Dirty.Title.One">1 ligne modifiée dans {0}</sys:String>
+    <sys:String x:Key="Dirty.Title.Many">{0} lignes modifiées dans {1}</sys:String>
+    <sys:String x:Key="Dirty.Title.Plain">Modifications en attente dans {0}</sys:String>
+    <sys:String x:Key="Dirty.Scope.Both">les deux PATH</sys:String>
+    <sys:String x:Key="Dirty.Scope.User">le PATH utilisateur</sys:String>
+    <sys:String x:Key="Dirty.Scope.System">le PATH système</sys:String>
+    <sys:String x:Key="Dirty.Detail">Rien n'est encore écrit dans le registre. Une sauvegarde sera créée automatiquement avant l'écriture.</sys:String>
+
+    <!-- ==================== Barre d'état ==================== -->
+    <sys:String x:Key="Status.Ready">Prêt.</sys:String>
+    <sys:String x:Key="Status.Loaded">Registre lu à {0} — {1} dossier(s) côté utilisateur, {2} côté système.</sys:String>
+    <sys:String x:Key="Status.Elevated">Mode administrateur</sys:String>
+    <sys:String x:Key="Status.NotElevated">Mode utilisateur — PATH système en lecture seule</sys:String>
+    <sys:String x:Key="Status.BackupCreated">Sauvegarde créée : {0}</sys:String>
+    <sys:String x:Key="Status.Restored">Sauvegarde du {0} chargée dans l'éditeur. Cliquez sur « Appliquer les modifications » pour l'écrire.</sys:String>
+    <sys:String x:Key="Status.Applied">Modifications appliquées à {0}. Sauvegarde automatique : {1}</sys:String>
+    <sys:String x:Key="Status.ReportSaved">Rapport enregistré : {0}</sys:String>
+
+    <!-- ==================== Liste ==================== -->
+    <sys:String x:Key="List.Add">Ajouter</sys:String>
+    <sys:String x:Key="List.Add.Tip">Insérer une nouvelle ligne vide (touche Inser)</sys:String>
+    <sys:String x:Key="List.Browse">Parcourir</sys:String>
+    <sys:String x:Key="List.Browse.Tip">Choisir un ou plusieurs dossiers à ajouter</sys:String>
+    <sys:String x:Key="List.Remove">Supprimer</sys:String>
+    <sys:String x:Key="List.Remove.Tip">Supprimer les lignes choisies (touche Suppr)</sys:String>
+    <sys:String x:Key="List.Up.Tip">Monter la ligne (Alt + Haut)</sys:String>
+    <sys:String x:Key="List.Down.Tip">Descendre la ligne (Alt + Bas)</sys:String>
+    <sys:String x:Key="List.Clean">Nettoyer</sys:String>
+    <sys:String x:Key="List.Clean.Tip">Actions de nettoyage sur cette liste</sys:String>
+    <sys:String x:Key="List.Search">Rechercher un dossier…</sys:String>
+    <sys:String x:Key="List.ReadOnly.Title">Lecture seule</sys:String>
+    <sys:String x:Key="List.ReadOnly.Message">Passez en administrateur pour pouvoir la modifier.</sys:String>
+    <sys:String x:Key="List.Summary">{0} dossier(s) · {1} caractères dans le registre · {2} une fois résolus</sys:String>
+    <sys:String x:Key="List.Summary.Errors"> · {0} erreur(s)</sys:String>
+    <sys:String x:Key="List.Summary.Warnings"> · {0} avertissement(s)</sys:String>
+    <sys:String x:Key="List.Summary.Modified"> · modifié</sys:String>
+
+    <sys:String x:Key="Col.Index">#</sys:String>
+    <sys:String x:Key="Col.Path">DOSSIER</sys:String>
+    <sys:String x:Key="Col.Diagnostic">DIAGNOSTIC</sys:String>
+    <sys:String x:Key="Col.Length">CAR.</sys:String>
+
+    <sys:String x:Key="Menu.Open">Ouvrir dans l'Explorateur</sys:String>
+    <sys:String x:Key="Menu.Copy">Copier le chemin</sys:String>
+    <sys:String x:Key="Menu.CopyResolved">Copier le chemin résolu</sys:String>
+    <sys:String x:Key="Menu.Up">Monter</sys:String>
+    <sys:String x:Key="Menu.Down">Descendre</sys:String>
+    <sys:String x:Key="Menu.Remove">Supprimer</sys:String>
+
+    <!-- ==================== Volet de détails ==================== -->
+    <sys:String x:Key="Detail.Empty.Title">Choisissez une ligne</sys:String>
+    <sys:String x:Key="Detail.Empty.Detail">Le détail du dossier apparaîtra ici.</sys:String>
+    <sys:String x:Key="Detail.Registry">CHEMIN DANS LE REGISTRE</sys:String>
+    <sys:String x:Key="Detail.Resolved">CHEMIN RÉSOLU</sys:String>
+    <sys:String x:Key="Detail.Content">CONTENU DU DOSSIER</sys:String>
+    <sys:String x:Key="Detail.PositionSize">POSITION ET TAILLE</sys:String>
+    <sys:String x:Key="Detail.Position">Position {0}</sys:String>
+    <sys:String x:Key="Detail.Length">{0} caractères</sys:String>
+    <sys:String x:Key="Detail.Executables">EXÉCUTABLES TROUVÉS</sys:String>
+    <sys:String x:Key="Detail.Open">Ouvrir dans l'Explorateur</sys:String>
+    <sys:String x:Key="Detail.Copy">Copier le chemin</sys:String>
+
+    <!-- ==================== Boîtes de dialogue ==================== -->
+    <sys:String x:Key="Dialog.Ok">OK</sys:String>
+    <sys:String x:Key="Dialog.Yes">Oui</sys:String>
+    <sys:String x:Key="Dialog.No">Non</sys:String>
+    <sys:String x:Key="Dialog.ReadOnly">Cette liste est en lecture seule : relancez l'application en administrateur.</sys:String>
+    <sys:String x:Key="Dialog.NoDuplicates">Aucun doublon dans cette liste.</sys:String>
+    <sys:String x:Key="Dialog.ConfirmDuplicates">Supprimer {0} doublon(s) ?</sys:String>
+    <sys:String x:Key="Dialog.AllFoldersExist">Tous les dossiers de cette liste existent.</sys:String>
+    <sys:String x:Key="Dialog.ConfirmMissing">Supprimer {0} ligne(s) dont le dossier est introuvable ?</sys:String>
+    <sys:String x:Key="Dialog.NothingToTidy">Rien à corriger : aucune ligne vide, aucun guillemet, aucun espace superflu.</sys:String>
+    <sys:String x:Key="Dialog.TidyDone">{0} ligne(s) vide(s) supprimée(s), {1} ligne(s) corrigée(s).</sys:String>
+    <sys:String x:Key="Dialog.More">… et {0} autre(s)</sys:String>
+    <sys:String x:Key="Dialog.FolderMissing">Ce dossier n'existe pas :\n{0}</sys:String>
+    <sys:String x:Key="Dialog.RegistryReadFailed">Impossible de lire le registre :\n{0}</sys:String>
+    <sys:String x:Key="Dialog.BackupPrompt.Title">Sauvegarder les PATH</sys:String>
+    <sys:String x:Key="Dialog.BackupPrompt.Label">Commentaire (facultatif) :</sys:String>
+    <sys:String x:Key="Dialog.BackupDone">Sauvegarde créée :\n{0}\n\nUn fichier .reg équivalent a été créé à côté (double-cliquez dessus pour restaurer sans l'application).</sys:String>
+    <sys:String x:Key="Dialog.BackupFailed">Échec de la sauvegarde :\n{0}</sys:String>
+    <sys:String x:Key="Dialog.RefreshConfirm">Des modifications non appliquées seront perdues. Relire le registre ?</sys:String>
+    <sys:String x:Key="Dialog.DiscardConfirm">Abandonner toutes les modifications non appliquées ?</sys:String>
+    <sys:String x:Key="Dialog.AdminConfirm">Les modifications non appliquées seront perdues. Relancer en administrateur ?</sys:String>
+    <sys:String x:Key="Dialog.CloseConfirm">Des modifications n'ont pas été appliquées. Quitter quand même ?</sys:String>
+    <sys:String x:Key="Dialog.SystemLocked">Le PATH système a été modifié mais l'application n'a pas les droits administrateur.\nRelancez-la en administrateur, ou annulez les modifications système.</sys:String>
+    <sys:String x:Key="Dialog.Apply.Intro">Les modifications suivantes vont être écrites dans le registre :\n\n</sys:String>
+    <sys:String x:Key="Dialog.Apply.System">• PATH système : {0} entrées, {1} caractères</sys:String>
+    <sys:String x:Key="Dialog.Apply.User">• PATH utilisateur : {0} entrées, {1} caractères</sys:String>
+    <sys:String x:Key="Dialog.Apply.Errors">\n⚠ {0} entrée(s) sont encore en erreur (dossier introuvable, variable non résolue…).</sys:String>
+    <sys:String x:Key="Dialog.Apply.TooLong">\n✖ Le PATH effectif dépasse 32767 caractères !</sys:String>
+    <sys:String x:Key="Dialog.Apply.Outro">\nUne sauvegarde automatique de l'état actuel sera créée avant l'écriture. Continuer ?</sys:String>
+    <sys:String x:Key="Dialog.Apply.Title">Appliquer les modifications</sys:String>
+    <sys:String x:Key="Dialog.Applied">Modifications appliquées.\n\nLes nouvelles fenêtres (Explorateur, terminal…) verront le nouveau PATH ; les programmes déjà ouverts doivent être relancés.</sys:String>
+    <sys:String x:Key="Dialog.AccessDenied">Accès refusé : relancez l'application en administrateur pour modifier le PATH système.</sys:String>
+    <sys:String x:Key="Dialog.WriteFailed">Échec de l'écriture :\n{0}</sys:String>
+    <sys:String x:Key="Dialog.NoCrossDuplicates">Aucun dossier du PATH utilisateur n'est déjà présent dans le PATH système.</sys:String>
+    <sys:String x:Key="Dialog.ConfirmCross">Retirer du PATH utilisateur {0} dossier(s) déjà présents dans le PATH système ?</sys:String>
+    <sys:String x:Key="Dialog.Unexpected">Une erreur inattendue s'est produite :\n\n{0}</sys:String>
+    <sys:String x:Key="Dialog.Browse.Title">Choisir un dossier à ajouter au PATH</sys:String>
+
+    <!-- ==================== Rapport ==================== -->
+    <sys:String x:Key="Report.Save.Title">Enregistrer le rapport</sys:String>
+    <sys:String x:Key="Report.Save.Filter">Fichier texte (*.txt)|*.txt</sys:String>
+    <sys:String x:Key="Report.Save.FileName">rapport-path_{0}.txt</sys:String>
+    <sys:String x:Key="Report.Title">RAPPORT D'ANALYSE DES VARIABLES PATH</sys:String>
+    <sys:String x:Key="Report.Generated">Généré le {0} sur {1} (utilisateur {2})</sys:String>
+    <sys:String x:Key="Report.Sizes">TAILLES</sys:String>
+    <sys:String x:Key="Report.Size.System">  PATH système     : {0} entrées, {1} car. (brut), {2} car. (résolu)</sys:String>
+    <sys:String x:Key="Report.Size.User">  PATH utilisateur : {0} entrées, {1} car. (brut), {2} car. (résolu)</sys:String>
+    <sys:String x:Key="Report.Size.Combined">  PATH effectif    : {0} / {1} car. — restant : {2} ({3:0.#} % utilisés)</sys:String>
+    <sys:String x:Key="Report.Over.Setx">  ⚠ Dépasse la limite setx ({0})</sys:String>
+    <sys:String x:Key="Report.Over.Cmd">  ⚠ Dépasse la limite cmd.exe ({0})</sys:String>
+    <sys:String x:Key="Report.Over.Absolute">  ✖ Dépasse la limite absolue (32767)</sys:String>
+    <sys:String x:Key="Report.Section.System">PATH SYSTÈME — {0}</sys:String>
+    <sys:String x:Key="Report.Section.User">PATH UTILISATEUR — {0}</sys:String>
+
+    <!-- ==================== Fenêtre de restauration ==================== -->
+    <sys:String x:Key="Restore.Title">Restaurer une sauvegarde</sys:String>
+    <sys:String x:Key="Restore.Intro">Choisissez une sauvegarde. Elle sera chargée dans l'éditeur : rien n'est écrit dans le registre tant que vous ne cliquez pas sur « Appliquer les modifications ».</sys:String>
+    <sys:String x:Key="Restore.System">PATH système</sys:String>
+    <sys:String x:Key="Restore.User">PATH utilisateur</sys:String>
+    <sys:String x:Key="Restore.Browse">Ouvrir un fichier…</sys:String>
+    <sys:String x:Key="Restore.Load">Charger</sys:String>
+    <sys:String x:Key="Restore.Cancel">Annuler</sys:String>
+    <sys:String x:Key="Restore.Empty">Aucune sauvegarde dans {0}\nUtilisez « Ouvrir un fichier… » pour charger un .json.</sys:String>
+    <sys:String x:Key="Restore.Open.Title">Ouvrir une sauvegarde</sys:String>
+    <sys:String x:Key="Restore.Open.Filter">Sauvegarde Path Analyzer (*.json)|*.json</sys:String>
+    <sys:String x:Key="Restore.Preview.Head">Fichier : {0}\nCréée le {1} sur {2} ({3})\n</sys:String>
+    <sys:String x:Key="Restore.Preview.Comment">Commentaire : {0}\n</sys:String>
+    <sys:String x:Key="Restore.Preview.System">\nPATH système ({0}) :\n  </sys:String>
+    <sys:String x:Key="Restore.Preview.User">\n\nPATH utilisateur ({0}) :\n  </sys:String>
+    <sys:String x:Key="Restore.Unreadable">Fichier illisible : {0}</sys:String>
+    <sys:String x:Key="Restore.PickOne">Cochez au moins un PATH à restaurer.</sys:String>
+    <sys:String x:Key="Restore.Display">{0}  —  utilisateur : {1} entrées, système : {2} entrées</sys:String>
+
+    <!-- ==================== Petite boîte de saisie ==================== -->
+    <sys:String x:Key="Prompt.Ok">OK</sys:String>
+    <sys:String x:Key="Prompt.Cancel">Annuler</sys:String>
+
+    <!-- ==================== Analyse ==================== -->
+    <sys:String x:Key="Analysis.Ok">OK</sys:String>
+    <sys:String x:Key="Analysis.Blank">Entrée vide (;;)</sys:String>
+    <sys:String x:Key="Analysis.InvalidChars">Caractères invalides</sys:String>
+    <sys:String x:Key="Analysis.Unresolved">Variable %…% non résolue</sys:String>
+    <sys:String x:Key="Analysis.Missing">Dossier introuvable</sys:String>
+    <sys:String x:Key="Analysis.EmptyDir">Dossier vide</sys:String>
+    <sys:String x:Key="Analysis.NoExecutable">Aucun exécutable</sys:String>
+    <sys:String x:Key="Analysis.Relative">Chemin relatif</sys:String>
+    <sys:String x:Key="Analysis.DuplicateInScope">Doublon dans ce PATH</sys:String>
+    <sys:String x:Key="Analysis.AlsoInSystem">Déjà présent dans le PATH système</sys:String>
+    <sys:String x:Key="Analysis.AlsoInUser">Déjà présent dans le PATH utilisateur</sys:String>
+    <sys:String x:Key="Analysis.Quotes">Contient des guillemets</sys:String>
+    <sys:String x:Key="Analysis.TrailingSpace">Espaces en début ou en fin</sys:String>
+    <sys:String x:Key="Analysis.IsFile">Ce chemin pointe vers un fichier et non un dossier.</sys:String>
+    <sys:String x:Key="Analysis.NoExecutableList">(aucun exécutable : .exe, .com, .bat, .cmd, .ps1, .dll)</sys:String>
+    <sys:String x:Key="Analysis.MoreExecutables">… et {0} autres</sys:String>
+    <sys:String x:Key="Analysis.ContentUnreadable">Contenu illisible : {0}</sys:String>
+    <sys:String x:Key="Analysis.Detail.Position">Position : {0}</sys:String>
+    <sys:String x:Key="Analysis.Detail.Raw">Valeur brute : {0}</sys:String>
+    <sys:String x:Key="Analysis.Detail.Resolved">Valeur résolue : {0}</sys:String>
+    <sys:String x:Key="Analysis.Detail.Length">Longueur : {0} caractère(s)</sys:String>
+    <sys:String x:Key="Analysis.Detail.Content">Contenu : {0} fichier(s), {1} sous-dossier(s), {2} exécutable(s), {3}</sys:String>
+    <sys:String x:Key="Analysis.Detail.Problems">Problèmes : {0}</sys:String>
+
+    <sys:String x:Key="Entry.Empty">(entrée vide)</sys:String>
+    <sys:String x:Key="Entry.Content.Empty">vide</sys:String>
+    <sys:String x:Key="Entry.Content.Summary">{0} exécutable(s) / {1} fichier(s) / {2} dossier(s)</sys:String>
+
+    <sys:String x:Key="Issues.Ok">Tout est en ordre</sys:String>
+    <sys:String x:Key="Issues.Missing">{0} introuvable(s)</sys:String>
+    <sys:String x:Key="Issues.Unresolved">{0} variable(s) non résolue(s)</sys:String>
+    <sys:String x:Key="Issues.EmptyDir">{0} dossier(s) vide(s)</sys:String>
+    <sys:String x:Key="Issues.Duplicates">{0} doublon(s)</sys:String>
+    <sys:String x:Key="Issues.Shared">{0} en commun avec l'autre PATH</sys:String>
+    <sys:String x:Key="Issues.Blank">{0} ligne(s) vide(s)</sys:String>
+
+    <!-- Unités utilisées par le formateur de taille, séparées par une barre verticale -->
+    <sys:String x:Key="Size.Units">o|Ko|Mo|Go|To</sys:String>
+
+    <!-- ==================== Fichier de sauvegarde ==================== -->
+    <sys:String x:Key="Backup.Reg.Comment">; Sauvegarde PATH créée par Path Analyzer le {0}</sys:String>
+    <sys:String x:Key="Backup.Reg.Machine">; Machine : {0} — Utilisateur : {1}</sys:String>
+    <sys:String x:Key="Registry.KeyMissing">Clé de registre introuvable : {0}</sys:String>
+    <sys:String x:Key="Backup.Unreadable">Fichier de sauvegarde illisible.</sys:String>
+    <sys:String x:Key="Backup.Auto.Comment">Sauvegarde automatique avant application</sys:String>
+</ResourceDictionary>

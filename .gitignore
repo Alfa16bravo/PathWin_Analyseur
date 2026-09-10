@@ -1,0 +1,16 @@
+# Build output
+bin/
+obj/
+dist/
+dist-standalone/
+*.pdb
+
+# Visual Studio / Rider
+.vs/
+.idea/
+*.user
+*.suo
+
+# Local files, not published
+_ui_v1/
+HISTORIQUE.md
